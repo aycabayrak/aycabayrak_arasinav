@@ -1,0 +1,163 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  12pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\usepackage{polyglossia}
+\setmainlanguage{turkish}
+\usepackage{booktabs}
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Enflasyon ve Ekonomik Büyüme},
+  pdfauthor={Ayca Bayrak},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Enflasyon ve Ekonomik Büyüme}
+\author{Ayca Bayrak\footnote{21080375, \href{https://github.com/aycabayrak/aycabayrak_arasinav.git}{Github Repo}}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hypertarget{giriux15f}{%
+\section{Giriş}\label{giriux15f}}
+
+Fiyat istikrarı ve ekonomik büyümenin gerçekleşmesi bir toplumun refah seviyesini belirlemede en önemli iki etkendir. Genel olarak iktisatta enflasyon, cari fiyat seviyesinde toplam talebin toplam arzdan fazla olmasıdır. Bunun sonucunda genel fiyat seviyesi yükselir ve toplam talep kısılarak toplam arza eşit bir duruma gelmiş olur. Enflasyonu fiyatlar genel seviyesinin yükselmesi olarak da adlandırırken dikkat etmemiz gereken husus fiyatlardaki her yükselişin enflasyon olmadığıdır. Önemli olan bu artışın sürekli ve büyük olmasıdır. Kısa sürede hızla yükselen fiyat seviyesinin bir süre sonra durulmasını enflasyon olarak tanımlayamayız.
+Enflasyonu iki başlık altında inceleyebiliriz: 1)Kaynaklarına Göre Enflasyon, 2) Hızlarına Göre Enflasyon.Kaynaklarına göre enflasyon; talep enflasyonu, maliyet enflasyonu olarak ikiye ayrılabiliriz.Hızlarına göre enflasyonu; hiperenflasyon ve belirsiz enflasyon olarak ikiye ayırabiliriz.
+Ekonomik büyüme, bir ekonomide üretim hacmindeki dönemsel artışlardır. Bu artışın en önemli belirleyicilerinden biri Gayri Safi Yurtiçi Hasıla'daki(GSYH) artıştır. Ekonomik büyüme, gelişmiş ülkelerin daha çok önem verdiği bir konudur. Gelişmekte olan ülkeler ise ekonomik kalkınma hususuna dikkat etmektedir. Ekonomik kalkınma, ekonomik büyümeyi içermekle birlikte işsizliğin azaltılması, gelir dengesizliğinin azaltılması gibi alanlara da önem vermektedir.
+
+\hypertarget{uxe7alux131ux15fmanux131n-amacux131}{%
+\subsection{Çalışmanın Amacı}\label{uxe7alux131ux15fmanux131n-amacux131}}
+
+Yaptığım araştırmada, enflasyon ile ekonomik büyümenin arasındaki ilişkiyi Türkiye ve OECD kurucu üyelerinden ABD, Birleşik Krallık, İsveç, Hollanda, Yunanistan, Almanya, Fransa, İtalya, İtalya ülkelerinin verilerini referans alarak araştırdım. Araştırmamda, OECD verilerinden yararlandım. Ülkelerin enflasyonu TÜFE verileri ile, ekonomik büyümeleri ise GSYH ile yorumlanmıştır. GSYH, kişi başına ABD doları ile; TÜFE ise yıllık büyüme oranı ile hesaplanmıştır. Veriler 2022 yılı baz alınarak hazırlanmıştır.
+Hala ortak bir görüşte karar kılınamamış olmakla birlikte birçok araştırma enflasyon ve ekonomik büyüme arasındaki bağı ele alır. 1980'lerin aksine son yıllarda, büyüme ve enflasyon arasında pozitif bir ilişki olduğu düşüncesi yaygınlaşmaya başlamıştır. İstikrarlı ekonomik büyüme, refah ve ekonomik kalkınma seviyenin arttırılması için önemlidir. Tam bu noktada enflasyon ve ekonomik büyüme arasındaki ilişkiyi incelemek mevcut ekonominin işleyişini kontrol etmekte oldukça fayda sağlar.
+
+\hypertarget{literatuxfcr}{%
+\subsection{Literatür}\label{literatuxfcr}}
+
+Enflasyon ve ekonomik büyüme üzerine yapılan çalışmaların kökleri klasik iktisat teorilerinden modern teorilere kadar uzanmaktadır. Bugün ekonomik büyümeyi ilerletmede enflasyonun göreli önemi bir tartışma konusu olmaya devam ediyor. Merkez bankalarının çoğu para politikaları, düşük enflasyon oranı ve yüksek ekonomik büyüme sağlamayı amaçlar.
+Son zamanlarda yapılan araştırmalarda enflasyonun ekonomik büyümeyi olumsuz yönde etkilediği iddia edilse de daha öneki çalışmalar enflasyonun ekonomik büyümeyi olumlu yönde etkilediğini öne sürüyor.Mevcut literatürde bu konu üçe ayrılabilir: enflasyonun ekonomik büyümeyi olumlu etkilediği, enflasyonun ekonomik büyümeyi olumsuz etkilediği, enflasyonun belli koşullarla ekonomik büyümeyi olumlu/olumsuz etkilediği. (Akinsola ve Odhiambo (\protect\hyperlink{ref-akinsola2017inflation}{2017}))
+Fakat yapılan araştırmaların geneline bakıldığında önemli olanın enflasyon oranından ziyade mevcut hükümetin aldığı önemler olduğu görülmektedir. Fiyat istikrarının sağlanması amacıyla hükümet çarpan etkisini göz ardı ederek toplam harcamaları azaltıcı politika uygularsa ekonomik büyümenin daha fazla azalmasına neden olabilir. Bu durumda pozitif ya da negatif bir etkiden bahsetmek için bazı değişkenlerin söz konusu olduğu söylenebilir. (Bahad vd. (\protect\hyperlink{ref-bahad2011enflasyon}{2011}))
+Yaptığım araştırmada verilere baktığımız zaman, Türkiye'nin diğer ülkelere oranla enflasyon seviyesinin çok yüksek olduğunu görmekteyiz. Fakat buna karşılık yine Türkiye'nin Gayri Safi Yurtiçi Hasılası diğer ülkelerden oldukça düşüktür. En düşük enflasyon oranı Fransa'da iken en yüksek Gayri Safi Yurtiçi Hasıla ise Hollanda'dır.
+Türkiye, 1970'lerde yüksek enflasyonun etkilerini yaşamış, 1980'lerde ise yetersiz yapısal uyumun olumsuz etkileriyle karşı karşıya kalmıştır. Ekonomi kısa vadeli sermaye girişleriyle desteklenmiş, büyümeyi teşvik eden uygulamalarda tüketim teşvik edilirken kamu sektörü finansman dengesi bozulmuştur. 1990'larda meydana gelen stagflasyon sırasında, enflasyonun ekonomik büyümenin maliyeti olduğu görüşü yoğunluk kazanmıştır. (ALBAYRAK (\protect\hyperlink{ref-albayrak9ekonomik}{t.y.}))
+Ekonomik büyümenin diğer etkenlerinin sabit tutulduğu bir araştırmada enflasyonun 10 puanlık artışından GSYH büyüme oranının \%0,2-0,3 oranında azalarak etkilendiği görülmüştür. Bu da enflasyon oranının ekonomik büyüme üzerindeki etkisinin negatif olduğunu gösterir.(Gokal ve Hanif (\protect\hyperlink{ref-gokal2004relationship}{2004}))
+
+\textbf{\emph{Taslakta bu cümleden sonra yer alan hiçbir şey silinmemelidir.}}
+
+\newpage
+
+\hypertarget{references}{%
+\section{Kaynakça}\label{references}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-akinsola2017inflation}{}}%
+Akinsola, F. A. ve Odhiambo, N. M. (2017). Inflation and economic growth: A review of the international literature.
+
+\leavevmode\vadjust pre{\hypertarget{ref-albayrak9ekonomik}{}}%
+ALBAYRAK, M. (t.y.). EKONOM{İ}K B{Ü}Y{Ü}ME VE ENFLASYON ARASINDAK{İ} {İ}L{İ}{Ş}K{İ}N{İ}N NARDL Y{Ö}NTEM{İ}YLE ANAL{İ}Z{İ}. \emph{Akademi Sosyal Bilimler Dergisi}, \emph{9}(27), 266-280.
+
+\leavevmode\vadjust pre{\hypertarget{ref-bahad2011enflasyon}{}}%
+Bahad, Z. K. H. Ö. T. vd. (2011). Enflasyon ve ekonomik b{ü}y{ü}me ili{ş}kisi: T{ü}rkiye ekonomisi {ü}zerine ekonometrik bir uygulama (1988-2007). \emph{Ni{ğ}de {Ü}niversitesi {İ}ktisadi ve {İ}dari Bilimler Fak{ü}ltesi Dergisi}, \emph{4}(2), 29-44.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gokal2004relationship}{}}%
+Gokal, V. ve Hanif, S. (2004). \emph{Relationship between inflation and economic growth} (C. 4). Economics Department, Reserve Bank of Fiji Suva.
+
+\end{CSLReferences}
+
+\end{document}
